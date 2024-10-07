@@ -1,0 +1,335 @@
+/*body {
+    background: rgb(175, 105, 0);
+    background: radial-gradient(circle, rgba(175, 105, 0, 1) 0%, rgba(48, 1, 1, 1) 100%);
+}*/
+
+
+body {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(124, 1, 1, 1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.nav {
+    position: relative;
+    z-index: 10;
+    margin: 10px 20px 0;
+}
+
+.nav a {
+    color: white;
+    font-size: 24px;
+    font-family: "League Gothic", sans-serif;
+    text-transform: uppercase;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.nav a:visited {
+    color: white;
+}
+
+.nav a:focus {
+    outline: none;
+    color: white;
+}
+
+.nav a:hover {
+    color: black;
+}
+
+.nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 100px;
+}
+
+.butonsHome{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+        border-radius: 8px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+button{
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px;
+    font-size: .8rem;
+    transition: 0.5s;
+    text-transform: uppercase;
+
+}
+
+button:hover{
+    color: black;
+}
+
+.start{
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 8rem;
+    font-family: "Monoton", sans-serif;
+    text-transform: uppercase;
+    animation: spread 1.5s ease-in-out infinite;
+}
+
+@keyframes spread {
+    0% {
+        letter-spacing: 0;
+        opacity: 1;
+    }
+    50% {
+        letter-spacing: 1rem;
+        opacity: 0.7;
+    }
+    100% {
+        letter-spacing: 0;
+        opacity: 1;
+    }
+}
+
+#vinil{
+    border-radius: 100%;
+    animation: girar 5s infinite linear;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+
+h2{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    font-family: "Marck Script", sans-serif;
+}
+
+h3{
+    background: rgba(255, 165, 0, 0.8);
+    color: black;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+h4{
+    font-size: 3rem;
+    font-family: "Marck Script", sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+h5{
+    color: white;
+}
+
+p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.card a{
+
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    font-family:"League Gothic", sans-serif;
+    text-transform: uppercase;
+}
+
+.card a:hover{
+    color: white;
+}
+
+.card .description {
+    display: none;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+    transition: 0.5s
+}
+
+.card .name{
+    font-family:"League Gothic", sans-serif;
+}
+
+.card:hover .description {
+    display: block;
+}
+
+.custom-card {
+    transition: transform 0.5s;
+    border-radius: 20px;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.table-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.table-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.0);
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    //background: rgba(0, 0, 0, 0.0);
+    border-radius: 10px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.table-custom {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border-collapse: collapse;
+}
+
+.table-custom th,
+.table-custom td {
+    padding: 10px;
+}
+
+.table-custom thead th {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 10;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-top: 10px;
+}
+
+.position-absolute {
+    cursor: pointer;
+    color: white;
+}
+
+#delete{
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-family:"League Gothic", sans-serif;
+}
+
+#delete:hover{
+    //color: black;
+    background: red;
+}
+
+#edit{
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-family:"League Gothic", sans-serif;
+}
+
+#edit:hover{
+    //color: black;
+    background: orange;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    opacity: 0.5;
+    z-index: 10;
+}
+
+footer a {
+    color: black;
+    font-size: 20px;
+    line-height: 28px;
+    text-decoration: none;
+}
+
+
